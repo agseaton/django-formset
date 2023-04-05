@@ -29,6 +29,7 @@ from formset.views import (
 from testapp.forms.address import AddressForm
 from testapp.forms.advertisement import AdvertisementForm, AdvertisementModelForm
 from testapp.forms.article import ArticleForm
+from testapp.forms.articleCaptcha import ArticleCaptchaForm
 from testapp.forms.complete import CompleteForm
 from testapp.forms.contact import (
     SimpleContactCollection, ContactCollection, ContactCollectionList, IntermediateContactCollectionList,
@@ -420,6 +421,9 @@ urlpatterns = [
     path('article', DemoFormView.as_view(
         form_class=ArticleForm,
     ), kwargs={'group': 'form', 'index': 5}, name='article'),
+    path('article-captcha', DemoFormView.as_view(
+        form_class=ArticleCaptchaForm,
+    ), kwargs={'group': 'form', 'index': 5}, name='article-captcha'),
     path('opinion', DemoFormView.as_view(
         form_class=OpinionForm,
     ), kwargs={'group': 'form', 'index': 6}, name='opinion'),

@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.messages',
     'formset',
+    'captcha',
     'testapp',
 ]
 
@@ -115,3 +116,5 @@ LOGGING = {
 }
 
 FORMSET_IGNORE_MARKED_FOR_REMOVAL = False
+
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
